@@ -652,24 +652,7 @@ renderGlobalLinks();
   initNewsSection();
 
   
-
-
-  /* ========= Interactive Campus Map (unchanged) ========= */
-  const mapFrom = document.getElementById('mapFrom');
-  const mapTo = document.getElementById('mapTo');
-  const navigateBtn = document.getElementById('navigateBtn');
-  const resetMapBtn = document.getElementById('resetMapBtn');
-  const campusMap = document.getElementById('campusMap');
-  const pathsLayer = document.getElementById('pathsLayer');
-  const walker = document.getElementById('walker');
-
-  const nodes = {
-    Gate: {id:'gate', x: 80, y: 250},
-    Library: {id:'library', x:370, y:315},
-    'Shakuntalam Hall': {id:'hall', x:450, y:430},
-    'Auditorium/Management dept.': {id:'management', x:650, y:230},
-    'CV RAMAN/Science Block': {id:'cv', x:570, y:540},
-    'Cafeteria(Shri. krishan bhawan)': {id:'canteen', x:200, y:315},  /* ========= Schedule Calendar with Inline Admin Form & Branch Filter ========= */
+  /* ========= Schedule Calendar with Inline Admin Form & Branch Filter ========= */
   async function initScheduleCalendar() {
     const calendarEl = document.getElementById("calendar");
     if (!calendarEl) return;
@@ -793,6 +776,23 @@ renderGlobalLinks();
   }
 
   window.addEventListener("DOMContentLoaded", initScheduleCalendar);
+
+  /* ========= Interactive Campus Map (unchanged) ========= */
+  const mapFrom = document.getElementById('mapFrom');
+  const mapTo = document.getElementById('mapTo');
+  const navigateBtn = document.getElementById('navigateBtn');
+  const resetMapBtn = document.getElementById('resetMapBtn');
+  const campusMap = document.getElementById('campusMap');
+  const pathsLayer = document.getElementById('pathsLayer');
+  const walker = document.getElementById('walker');
+
+  const nodes = {
+    Gate: {id:'gate', x: 80, y: 250},
+    Library: {id:'library', x:370, y:315},
+    'Shakuntalam Hall': {id:'hall', x:450, y:430},
+    'Auditorium/Management dept.': {id:'management', x:650, y:230},
+    'CV RAMAN/Science Block': {id:'cv', x:570, y:540},
+    'Cafeteria(Shri. krishan bhawan)': {id:'canteen', x:200, y:315},
     'Mechanical engineering dept.': {id:'mechanical', x:450, y:530},
     'Computer engineering dept.': {id:'comp', x:440, y:315},
     'Electrical engineering dept.': {id:'ele', x:540, y:315},
@@ -1125,8 +1125,6 @@ renderGlobalLinks();
     }
   };
 });
-
-
 
 
 
