@@ -232,4 +232,3 @@ window.CCDB = {
 
 
 console.log('CCDB (Firestore) initialized');
-
