@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Connect — Your college life simplified</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <!-- SVG logo: circle + C + cap -->
+        <svg width="52" height="52" viewBox="0 0 64 64" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gA" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#00BFA6"/>
+              <stop offset="1" stop-color="#49d6b6"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#gA)" opacity="0.98"/>
+          <!-- stylized C -->
+          <path d="M24 20c9-4 20 1 20 11 0 10-10 15-19 12" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- mortar cap -->
+          <path d="M32 17 L46 24 L32 30 L18 24 Z" fill="#fff" opacity="0.95"/>
+        </svg>
+
+        <div class="title">
+          <span class="name">Campus Connect</span>
+          <span class="tag">Your college life simplified</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn btn-primary" onclick="window.location='signin.html'">Sign In/ Sign Up</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-card" role="region" aria-label="Hero">
+          <span class="kicker">Your College Companion</span>
+          <h1>Your college life <span style="color:var(--primary)">simplified</span></h1>
+          <p class="lead">
+            Campus Connect brings access to notes, schedules, results, forums and campus updates into one unified place — designed for students, by students.
+            No scattered portals. Faster collaboration. Better campus navigation.
+          </p>
+
+          <div class="hero-cta">
+            <button class="btn btn-primary" onclick="document.querySelector('.btn-ghost').focus()">Get Started — Free</button>
+            <button class="btn btn-ghost" onclick="window.location='#features'">Explore Features</button>
+          </div>
+
+          <div class="highlights" aria-hidden="true">
+            <div class="chip">Notes & Uploads</div>
+            <div class="chip">Discussion Forums</div>
+            <div class="chip">Timetable & Exams</div>
+            <div class="chip">Campus Map</div>
+          </div>
+
+          <div class="features" id="features" aria-labelledby="features-heading">
+            <div class="feature">
+              <h3>Unified Access</h3>
+              <p>One place for attendance, results, library links and all college portals — organized and searchable.</p>
+            </div>
+            <div class="feature">
+              <h3>Forums & Collaboration</h3>
+              <p>Q&A, project rooms, and shared notes so seniors and juniors can collaborate easily.</p>
+            </div>
+            <div class="feature">
+              <h3>Schedules & Notifications</h3>
+              <p>Personalized class timetables, exam reminders and event announcements that actually reach you.</p>
+            </div>
+            <div class="feature">
+              <h3>Campus Navigation</h3>
+              <p>Interactive map and markers for labs, departments, hostels and important locations around campus.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-hidden="false">
+          <div class="pill">🎓 Clubs & Societies</div>
+          <div class="pill">🗂 Organized Notes</div>
+          <div class="pill">📣 Events & Placements</div>
+          <div class="pill">🔒 Secure Accounts</div>
+        </aside>
+      </section>
+
+      <section id="about" style="margin-top:8px;">
+        <div style="display:flex; gap:18px; flex-direction:column;">
+          <h2 style="font-family:Playfair Display, serif; margin:6px 0 8px;">About Campus Connect</h2>
+          <p class="muted small" style="max-width:68ch;">
+            Campus Connect is built to reduce friction in student life — a central platform to access academic and campus resources. It’s modular (notes, forum, map, announcements), mobile-friendly, and ready to integrate with Firebase for authentication and Firestore storage.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="contact" id="contact">
+      <div class="small muted">© <strong>Campus Connect</strong> 2025 · Built by Technovengers</div>
+      <div class="small muted">Made with ❤ • <a href="mailto:wearetechnovengers@gmail.com" style="color:var(--primary); text-decoration:none">Contact us:- wearetechnovengers@gmail.com</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // minimal JS: keyboard-accessible focus given for CTA
+    (function(){
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'k' && (e.ctrlKey || e.metaKey)) {
+          // ctrl/cmd + k focuses search / hero cta in real app
+          e.preventDefault();
+          document.querySelector('.btn-primary').focus();
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
+
+
+
